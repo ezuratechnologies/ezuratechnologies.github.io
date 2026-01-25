@@ -1,3 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #FF6600;
+    text-decoration: none;
+}
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1C1C1C;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    color: #FF6600;
+}
+
 /* Reset & base */
 body, html {
     margin: 0;
