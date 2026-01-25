@@ -51,9 +51,14 @@ body, html {
 /* Navbar links container */
 .nav-links {
     display: flex;
-    background: #f7f7f7; /* pill container */
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    justify-content: flex-end;
+    background: #f7f7f7; 
     padding: 5px 10px;
     border-radius: 10px;
+    gap: 10px;
+    max-width: 100%;
+    overflow: hidden; /* prevent overflow on small screens */
 }
 
 /* Navbar links as buttons */
@@ -428,4 +433,5 @@ body, html {
         padding: 10px 15px; /* reduce navbar padding */
     }
 }
+
 
