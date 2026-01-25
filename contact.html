@@ -35,15 +35,20 @@
     <section class="contact-section fade-in">
         <div class="container">
 
-            <!-- Contact Info -->
+            <!-- Contact Buttons -->
             <div class="contact-info">
-                <div><i class="fas fa-envelope"></i><a href="mailto:kiran@ezuratechnologies.com">Email Us</a></div>
-                <div><i class="fas fa-map-marker-alt"></i> Ezura Technologies Pvt Ltd, Family Corner Building, Kanjirakode, Thrissur, Kerala, India - 680590</div>
-                <div><i class="fab fa-whatsapp"></i>  <a href="https://wa.me/97430994822?text=Hello%20Ezura%20Technologies" target="_blank">  Chat with us on WhatsApp  </a></div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kiran@ezuratechnologies.com" class="email-btn" target="_blank">Email Us</a>
+                </div>
+                <div>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/97430994822?text=Hello%20Ezura%20Technologies" target="_blank" class="whatsapp-btn">Chat with us on WhatsApp</a>
+                </div>
             </div>
 
-            <!-- Contact Form -->
-            <form action="#" method="POST" class="contact-form fade-in">
+            <!-- Contact Form via Formspree -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form fade-in">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -51,7 +56,7 @@
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group">
@@ -94,5 +99,3 @@
 
 </body>
 </html>
-
-
