@@ -211,3 +211,119 @@ body, html {
 .founder {
     background-color: #f5f5f5;
     padd
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section h2, .contact-section h1 {
+    color: #333;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-info div i {
+    font-size: 1.3rem;
+    color: #FF6600;
+}
+
+.contact-info a {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FF6600;
+    outline: none;
+}
+
+.contact-form .btn {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn:hover {
+    background-color: #e65c00;
+}
+
+/* Fade-in animation */
+.contact-section.fade-in, .contact-form.fade-in, .hero.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contact-section.fade-in.visible, .contact-form.fade-in.visible, .hero.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar button highlight (if not in your CSS already) */
+.nav-links a.active {
+    background-color: #FF6600;
+    color: #fff !important;
+    border-radius: 6px;
+    padding: 8px 12px;
+}

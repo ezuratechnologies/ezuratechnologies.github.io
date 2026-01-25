@@ -1,41 +1,91 @@
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="container">
-        <a href="index.html" class="nav-logo">Ezura</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="approach.html">Approach</a>
-            <a href="founder.html">Founder</a>
-            <a href="contact.html">Contact</a> <!-- This is the new link -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ezura Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">Ezura</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="approach.html">Approach</a>
+                <a href="founder.html">Founder</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<section class="contact-section fade-in">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Have a question, suggestion, or collaboration idea? We’d love to hear from you. Reach out to us and we’ll respond as quickly as possible.</p>
-
-        <div class="contact-info">
-            <div><i class="fas fa-envelope"></i> <a href="mailto:kiran@ezuratechnologies.com">kiran@ezuratechnologies.com</a></div>
-            <div><i class="fas fa-map-marker-alt"></i> Ezura Technologies Pvt Ltd, Family Corner Building, Kanjirakode, Thrissur, Kerala, India - 680590</div>
-            <div><i class="fab fa-whatsapp"></i> +974 30994822</div>
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <h1>Contact Ezura Technologies</h1>
+            <p>Have a question, suggestion, or collaboration idea? Reach out to us and we’ll respond as quickly as possible.</p>
         </div>
+    </section>
 
-        <!-- Optional Contact Form -->
-        <form action="#" method="POST" class="contact-form fade-in">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <!-- Contact Info + Form -->
+    <section class="contact-section fade-in">
+        <div class="container">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div><i class="fas fa-envelope"></i> <a href="mailto:kiran@ezuratechnologies.com">kiran@ezuratechnologies.com</a></div>
+                <div><i class="fas fa-map-marker-alt"></i> Ezura Technologies Pvt Ltd, Family Corner Building, Kanjirakode, Thrissur, Kerala, India - 680590</div>
+                <div><i class="fab fa-whatsapp"></i> +974 30994822</div>
+            </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="contact-form fade-in">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- JS for active page highlight + fade-in -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Active page highlight
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const path = window.location.pathname;
+        const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+        navLinks.forEach(link => {
+            if(link.getAttribute('href') === page) {
+                link.classList.add('active');
+            }
+        });
+
+        // Fade-in animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    });
+    </script>
+
+</body>
+</html>
