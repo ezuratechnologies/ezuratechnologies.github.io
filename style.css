@@ -407,3 +407,25 @@ body, html {
     height: 400px;
     border: 0;
 }
+
+/* =========================
+   Responsive Navbar for Mobile
+========================= */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap; /* allow links to wrap to next line */
+        justify-content: center; /* center links */
+        gap: 10px; /* spacing between buttons */
+    }
+
+    .nav-links a {
+        margin-left: 0; /* remove left margin for better stacking */
+        padding: 8px 16px; /* slightly smaller padding */
+        font-size: 14px; /* adjust font size */
+    }
+
+    .navbar {
+        padding: 10px 15px; /* reduce navbar padding */
+    }
+}
+
