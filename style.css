@@ -215,26 +215,13 @@ body, html {
 /* =========================
    Contact Section
 ========================= */
-
 .contact-section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-.contact-section h2, .contact-section h1 {
-    color: #333;
-    font-weight: 700;
-}
-
-.contact-section p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    color: #555;
-    line-height: 1.6;
-}
-
+/* Contact Info */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -272,19 +259,27 @@ body, html {
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
-    gap: 15px;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form label {
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
     transition: border-color 0.3s;
 }
 
@@ -301,6 +296,7 @@ body, html {
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s;
 }
 
@@ -308,22 +304,18 @@ body, html {
     background-color: #e65c00;
 }
 
-/* Fade-in animation */
-.contact-section.fade-in, .contact-form.fade-in, .hero.fade-in {
+/* Fade-in Animation */
+.contact-section.fade-in,
+.contact-form.fade-in,
+.hero.fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.contact-section.fade-in.visible, .contact-form.fade-in.visible, .hero.fade-in.visible {
+.contact-section.fade-in.visible,
+.contact-form.fade-in.visible,
+.hero.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Navbar button highlight (if not in your CSS already) */
-.nav-links a.active {
-    background-color: #FF6600;
-    color: #fff !important;
-    border-radius: 6px;
-    padding: 8px 12px;
 }
