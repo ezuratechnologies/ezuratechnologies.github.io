@@ -36,19 +36,39 @@
         <div class="container">
 
             <!-- Contact Buttons -->
-            <div class="contact-info">
-                <div>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:kiran@ezuratechnologies.com" class="email-btn" target="_blank">Email Us</a>
-                </div>
-                <div>
-                    <i class="fab fa-whatsapp"></i>
-                    <a href="https://wa.me/97430994822?text=Hello%20Ezura%20Technologies" target="_blank" class="whatsapp-btn">Chat with us on WhatsApp</a>
-                </div>
+            <div class="contact-buttons">
+                <a href="mailto:kiran@ezuratechnologies.com" class="email-btn" target="_blank">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+                <a href="https://wa.me/97430994822?text=Hello%20Ezura%20Technologies" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
             </div>
 
-            <!-- Contact Form via Formspree -->
-            <form action="https://formspree.io/f/xojegezl" method="POST" class="contact-form fade-in">
+            <!-- Address -->
+            <p class="contact-address fade-in">
+                <i class="fas fa-map-marker-alt"></i>
+                Ezura Technologies Pvt Ltd,<br>
+                Family Corner Building,<br>
+                Kanjirakode, Thrissur,<br>
+                Kerala, India - 680590
+            </p>
+
+            <!-- Google Map -->
+            <div class="contact-map fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.04822887877165!2d76.22831962333481!3d10.674823763117022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c281a6184f99%3A0x477e86eb53ce6246!2sFamily%20Corner!5e0!3m2!1sen!2sqa!4v1769341304701!5m2!1sen!2sqa"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form fade-in">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -99,4 +119,3 @@
 
 </body>
 </html>
-
