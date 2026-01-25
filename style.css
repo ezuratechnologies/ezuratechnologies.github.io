@@ -210,7 +210,9 @@ body, html {
 ========================= */
 .founder {
     background-color: #f5f5f5;
-    padd
+    padding: 60px 20px;
+    text-align: center;
+}
 
 /* =========================
    Contact Section Modern Style
@@ -335,3 +337,4 @@ body, html {
     opacity: 1;
     transform: translateY(0);
 }
+
