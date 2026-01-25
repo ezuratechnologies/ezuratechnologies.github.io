@@ -11,10 +11,13 @@
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container">
+        <!-- Logo -->
         <a href="index.html" class="nav-logo">Ezura</a>
+
+        <!-- Links as buttons -->
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="projects.html" class="active">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="approach.html">Approach</a>
             <a href="founder.html">Founder</a>
         </div>
@@ -67,3 +70,16 @@
 
 </body>
 </html>
+
+<script>
+const navLinks = document.querySelectorAll('.nav-links a');
+const path = window.location.pathname;
+const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+
+navLinks.forEach(link => {
+    if(link.getAttribute('href') === page) {
+        link.classList.add('active');
+    }
+});
+</script>
+
