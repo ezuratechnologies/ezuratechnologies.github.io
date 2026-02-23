@@ -440,7 +440,31 @@ body, html {
 Suggested CSS Additions
 To make this grid look professional in your style.css, add these styles:
 
-CSS
+:root {
+    --ezura-brand: #ff8c2d;    /* The primary orange from your logo */
+    --ezura-gold: #ffc107;     /* The yellow/gold accent from your logo */
+    --ezura-dark: #0f172a;     /* Professional slate for text */
+    --ezura-bg: #f8fafc;       /* Light background to make cards pop */
+}
+
+/* Approach Page Logic */
+.approach {
+    padding: 80px 20px;
+    background-color: var(--ezura-bg);
+    text-align: center;
+}
+
+.brand-text {
+    color: var(--ezura-brand) !important;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* The Grid for the 3 Methodology Pillars */
 .approach-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -453,33 +477,49 @@ CSS
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-top: 4px solid #3b82f6; /* Modern tech blue accent */
+    /* High-energy top border matching your logo gradient */
+    border-top: 5px solid var(--ezura-brand);
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
+.approach-card:hover {
+    transform: translateY(-5px);
+}
+
+.approach-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Partnership Section Branding */
 .partnership-portal {
     margin-top: 60px;
     padding: 40px;
-    background: #f1f5f9;
+    background: #ffffff;
     border-radius: 12px;
     text-align: center;
+    /* Subtle accent using your brand color */
+    border: 1px solid #e2e8f0;
+    border-bottom: 4px solid var(--ezura-gold);
 }
 
+/* Brand Button with Logo Gradient */
 .cta-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #3b82f6;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--ezura-brand), var(--ezura-gold));
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 50px; /* Modern rounded look */
     font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 140, 45, 0.3);
+    transition: all 0.3s ease;
 }
 
-.subtitle {
-    color: #64748b;
-    font-size: 1.1rem;
-    margin-top: -10px;
-    margin-bottom: 30px;
+.cta-button:hover {
+    box-shadow: 0 6px 20px rgba(255, 140, 45, 0.5);
+    opacity: 0.9;
 }
-
 
