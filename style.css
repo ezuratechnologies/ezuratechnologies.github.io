@@ -194,20 +194,123 @@ body, html {
 /* =========================
    Approach Section
 ========================= */
+It is best to replace your old CSS code for the approach section. Since we are moving from a simple bulleted list to a professional grid layout with cards, keeping the old code might cause "clashes" where the old styles try to override the new ones, leading to alignment issues. 
+
+Here is the complete, cleaned-up CSS for your Approach page. This version uses the exact button color from your image and adds the subtle 2-point shadow you requested for a stress-free reading experience.
+
+Complete style.css for Approach Page
+CSS
+/* --- Ezura Brand Variables --- */
+:root {
+    --ezura-orange: #ff6a00;    /* Exact orange from your button image */
+    --ezura-dark: #0f172a;      /* Professional dark navy for text */
+    --ezura-muted: #64748b;     /* Muted grey for subtitles */
+    --ezura-bg: #ffffff;        /* Clean white background */
+    --ezura-card-bg: #ffffff;   /* Card background */
+}
+
+/* --- Approach Section Layout --- */
 .approach {
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background-color: var(--ezura-bg);
+    text-align: center; /* Keeps headers and buttons professional and centered */
 }
-.approach h2 {
+
+.brand-text {
+    color: var(--ezura-orange) !important;
+}
+
+.subtitle {
+    color: var(--ezura-muted);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* --- The Methodology Grid --- */
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+}
+
+/* --- Professional Cards --- */
+.approach-card {
+    background: var(--ezura-card-bg);
+    padding: 35px;
+    border-radius: 12px;
+    text-align: left;
+    /* Subtle 2-point shadow for professional depth and less eye-stress */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--ezura-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.approach-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.approach-card p {
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Partnership Portal --- */
+.partnership-portal {
+    margin-top: 80px;
+    padding: 50px 20px;
+    background: #f8fafc;
+    border-radius: 15px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
-.approach ul {
-    max-width: 700px;
-    margin: 0 auto;
-    list-style-type: disc;
-    font-size: 16px;
+
+/* --- The Signature Orange Button --- */
+.cta-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background-color: var(--ezura-orange); /* Locked brand color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px; /* Matches your button screenshot */
+    font-weight: 700;
+    text-transform: capitalize; /* Cleaner look than all-caps */
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    /* Subtle shadow to match the screenshot */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Animation --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* =========================
@@ -434,80 +537,3 @@ body, html {
     }
 }
 
-/* =========================
-   approach-grid
-========================= */
-Suggested CSS Additions
-To make this grid look professional in your style.css, add these styles:
-
-:root {
-    --ezura-brand: #ff8c2d;    /* Exact orange from your logo */
-    --ezura-dark: #0f172a;     /* Professional dark navy */
-}
-
-.brand-text {
-    color: var(--ezura-brand) !important;
-}
-
-.approach {
-    padding: 80px 20px;
-    text-align: center; /* Keeps everything balanced and professional */
-}
-
-.subtitle {
-    color: #64748b;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-}
-
-.approach-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.approach-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: left;
-    /* Subtle 2-point shadow for professional depth */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid var(--ezura-brand);
-    transition: transform 0.3s ease;
-}
-
-.approach-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.partnership-portal {
-    margin-top: 60px;
-    padding: 50px;
-    background: #f8fafc;
-    border-radius: 15px;
-    text-align: center; /* Centers the text and the button */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* THE BUTTON: Centered, Professional, Logo-Orange */
-.cta-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 35px;
-    background-color: var(--ezura-brand); /* Your Logo Color */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    filter: brightness(1.1);
-    transform: scale(1.02);
-}
