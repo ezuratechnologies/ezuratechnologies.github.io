@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ezura Technologies</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="/ezura.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ezura-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ezura-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+        .brand-text { color: #000000 !important; font-weight: 700; }
+        .about-section { padding: 80px 20px; background-color: #ffffff; text-align: center; }
+        .subtitle { color: #64748b; font-size: 1.1rem; margin-bottom: 50px; }
+        
+        .about-content { max-width: 800px; margin: auto; text-align: left; }
+        .about-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 2pt Shadow */
+            border-left: 5px solid #ff6a00; /* Signature Orange Accent */
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background-color: #ff6a00 !important; 
+            color: #ffffff !important; 
+            text-decoration: none;
+            border-radius: 8px; 
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .cta-button:hover { transform: scale(1.02); filter: brightness(1.1); }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="nav-logo">Ezura</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="approach.html">Approach</a>
+            <a href="about.html">About</a>
+            <a href="founder.html">Founder</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="about-section">
+    <div class="container fade-in">
+        <h2 class="brand-text">About Ezura Technologies</h2>
+        <p class="subtitle">Building the Architecture of Connection.</p>
+
+        <div class="about-content">
+            <div class="about-card">
+                <h3 class="brand-text">Our Vision</h3>
+                <p>Ezura is a <strong>Strategic Venture Studio</strong> designed to turn real-world friction into stable digital assets. We architect ecosystems that simplify complex life tasks for families and enthusiasts.</p>
+            </div>
+
+            <div class="about-card">
+                <h3 class="brand-text">Our Strategy</h3>
+                <p>By pressure-testing our infrastructure in the <strong>Indian market</strong>, we ensure our assets are robust enough for global expansion. Our ultimate roadmap leads toward a collective <strong>IPO</strong> of the Ezura ecosystem.</p>
+            </div>
+        </div>
+
+        <a href="approach.html" class="cta-button">Explore Our Methodology</a>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    });
+</script>
+
+</body>
+</html>
