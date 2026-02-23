@@ -501,5 +501,106 @@ body, html {
     }
 }
 
+/* =================================
+   Ezura About Page Specific Styles
+==================================== */
+
+/* 1. Branding & Typography */
+.brand-text {
+    color: #000000 !important; /* Bold Black for Authority */
+    font-weight: 700;
+}
+
+.about-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.subtitle {
+    color: #64748b; /* Slate Gray for muted professional feel */
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* 2. Content Layout */
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 3. The Vision Cards (2-Point Shadow) */
+.about-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Subtle 2-point shadow to reduce eye strain */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
+    border-left: 5px solid #ff6a00; /* Signature Orange Accent */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.about-card p {
+    color: #334155;
+    line-height: 1.8;
+}
+
+/* 4. The Action Button (Vibrant Orange) */
+.cta-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 40px;
+    background-color: #ff6a00 !important; /* Locked Brand Orange */
+    color: #ffffff !important; /* Forced White Text */
+    text-decoration: none;
+    border-radius: 8px; 
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 5. Animation Support */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 6. Responsive Tuning */
+@media (max-width: 768px) {
+    .about-card {
+        padding: 25px;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
 
 
