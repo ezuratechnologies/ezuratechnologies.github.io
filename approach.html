@@ -38,48 +38,39 @@
 </nav>
 
 <section class="approach">
-    <div class="container">
-        <h2>Our Approach</h2>
-        <ul>
-            <li>Transparent development process</li>
-            <li>Founder-led accountability</li>
-            <li>Long-term vision & innovation</li>
-            <li>Product-first, proof through execution</li>
-        </ul>
+    <div class="container fade-in">
+        <h2>Our Methodology: Logic-First Engineering</h2>
+        <p class="subtitle">Turning real-world friction into elegant digital solutions.</p>
+
+        <div class="approach-grid">
+            <div class="approach-card">
+                <h3>01. Logic-First Architecture</h3>
+                <p>Rooted in strategic finance, our process begins with the blueprint, not the brush. We map out complex user journeys—like managing family legacies or real-time travel coordination—before a single line of code is written.</p>
+            </div>
+
+            <div class="approach-card">
+                <h3>02. Purpose-Built Simplicity</h3>
+                <p>We prioritize utility over ornament. By using rapid visualization and logic flows, we ensure the "Magic Button"—the core feature that solves the user's problem—remains the focus of every app.</p>
+            </div>
+
+            <div class="approach-card">
+                <h3>03. Strategic Scaling</h3>
+                <p>We launch in the world's most diverse markets, starting with India, to pressure-test our products for global resilience. This ensures our solutions work seamlessly across generations and geographies.</p>
+            </div>
+        </div>
+
+        <div class="partnership-portal">
+            <h3>Collaborate with the Ezura Network</h3>
+            <p>We provide a lead-generation marketplace that connects professional service providers with high-intent users. We invite travel agents and automotive suppliers to join our ecosystem.</p>
+            <a href="contact.html" class="cta-button">Join the Network</a>
+        </div>
     </div>
 </section>
-
-<script>
-const navLinks = document.querySelectorAll('.nav-links a');
-const path = window.location.pathname;
-const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
-
-navLinks.forEach(link => {
-    if(link.getAttribute('href') === page) {
-        link.classList.add('active');
-    }
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    fadeElements.forEach(el => observer.observe(el));
-});
-</script>
 
 
 </body>
 </html>
+
 
 
 
