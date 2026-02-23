@@ -3,131 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ezura Technologies – Approach</title>
-    <style>
-        /* --- Basic Reset & Base Styles --- */
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-        }
-        
-        body { 
-            background-color: #ffffff; 
-            color: #334155; 
-            line-height: 1.6; 
-        }
+    <title>Ezura – Our Approach</title>
+    <link rel="stylesheet" href="style.css">
 
-        /* --- Layout Container --- */
-        .container { 
-            width: 90%; 
-            max-width: 1100px; 
-            margin: auto; 
-            padding: 60px 0; 
-        }
+    <link rel="icon" href="/ezura.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ezura-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ezura-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-        /* --- Typography & Branding --- */
-        .brand-text {
-            color: #ff6a00 !important; /* Exact Vibrant Orange from Logo */
-        }
-
-        h2 { 
-            font-size: 2.2rem; 
-            margin-bottom: 20px; 
-        }
-
-        .subtitle {
-            color: #64748b;
-            font-size: 1.15rem;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* --- Methodology Grid --- */
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        /* --- Professional Cards with 2pt Shadow --- */
-        .approach-card {
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 12px;
-            text-align: left;
-            /* Subtle 2-point shadow for professional depth and zero eye-stress */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
-            border-top: 4px solid #ff6a00;
-            transition: transform 0.3s ease;
-        }
-
-        .approach-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-        }
-
-        .approach-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        /* --- Partnership Portal --- */
-        .partnership-portal {
-            margin-top: 80px;
-            padding: 60px 30px;
-            background: #f8fafc;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        /* --- THE BUTTON: Vibrant Orange with White Text --- */
-        .cta-btn { 
-            display: inline-block; 
-            background-color: #ff6a00 !important; /* Forced Logo Orange */
-            color: #ffffff !important; /* Forced White Text */
-            padding: 16px 35px; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: 700; 
-            text-transform: capitalize;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-top: 25px;
-        }
-
-        .cta-btn:hover { 
-            background-color: #e65f00 !important; /* Slightly darker on hover */
-            transform: scale(1.02);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        }
-
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 768px) {
-            h2 { font-size: 1.8rem; }
-            .container { padding: 40px 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<nav class="navbar">
     <div class="container">
-        
-        <header class="text-center">
-            <h2 class="brand-text">The Ezura Approach: Engineering for Purpose</h2>
-            <p class="subtitle">Turning real-world friction into stable digital assets.</p>
-        </header>
+        <a href="index.html" class="nav-logo">Ezura</a>
 
-        <section class="approach-grid">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="approach.html">Approach</a>
+            <a href="founder.html">Founder</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="approach">
+    <div class="container fade-in">
+        <h2 class="brand-text">The Ezura Approach: Engineering for Purpose</h2>
+        <p class="subtitle">Turning real-world friction into stable digital assets.</p>
+
+        <div class="approach-grid">
             <div class="approach-card">
                 <h3 class="brand-text">01. Blueprint Logic</h3>
                 <p>We architect the solution before writing a single line of code. Rooted in <strong>Strategic Finance</strong>, our methodology uses logic to map out exact "frictions"—like the document chaos that inspired <strong>FamDocs</strong>—to ensure the infrastructure is stable and predictable.</p>
@@ -135,22 +43,50 @@
 
             <div class="approach-card">
                 <h3 class="brand-text">02. Specialized Utility</h3>
-                <p>We believe in "one app, one clear purpose". We strip away the noise and focus on the core feature that makes a tool indispensable, such as the <strong>Buddy</strong> Walkie-Talkie for instant connection or the <strong>Garage+</strong> 3D Preview for visual upgrades.</p>
+                <p>We believe in "one app, one clear purpose." We strip away the noise and focus on the core feature that makes a tool indispensable, such as the <strong>Buddy</strong> Walkie-Talkie for instant connection or the <strong>Garage+</strong> 3D Preview for visual upgrades.</p>
             </div>
 
             <div class="approach-card">
                 <h3 class="brand-text">03. Strategic Scaling</h3>
-                <p>We launch in the <strong>Indian market</strong> to pressure-test our systems against the highest standards of scale. Solving for a billion-person economy ensures our infrastructure is robust enough for the global stage and a future <strong>IPO</strong>.</p>
+                <p>We launch in the vast <strong>Indian market</strong> to pressure-test our systems against the highest standards of scale. Solving for a billion-person economy ensures our infrastructure is robust enough for the global stage and a future <strong>IPO</strong>.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="partnership-portal">
-            <h2 class="brand-text">The Partnership Engine</h2>
+        <div class="partnership-portal">
+            <h3 class="brand-text">The Partnership Engine</h3>
             <p>Ezura is an ecosystem built for professional collaboration. We connect travel agents with <strong>Buddy</strong> inquiries and automotive suppliers with <strong>Garage+</strong> enthusiasts through a lead-generation marketplace. We never sell or monetize user data.</p>
-            <a href="contact.html" class="cta-btn">Partner with Ezura</a>
-        </section>
-
+            <a href="contact.html" class="cta-button">Partner with Ezura</a>
+        </div>
     </div>
+</section>
+
+<script>
+const navLinks = document.querySelectorAll('.nav-links a');
+const path = window.location.pathname;
+const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+
+navLinks.forEach(link => {
+    if(link.getAttribute('href') === page) {
+        link.classList.add('active');
+    }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+});
+</script>
 
 </body>
 </html>
