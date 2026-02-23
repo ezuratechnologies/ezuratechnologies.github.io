@@ -440,63 +440,74 @@ body, html {
 Suggested CSS Additions
 To make this grid look professional in your style.css, add these styles:
 
-CSS
 :root {
-    --ezura-brand: #ff8c2d;    /* Your Logo Orange */
-    --ezura-gold: #ffc107;     /* Your Logo Gold */
-    --ezura-dark: #0f172a;     /* Deep Navy/Black Background */
-    --ezura-text: #f8fafc;     /* Light text for dark background */
-}
-
-/* Page Background - Dark & Techy */
-body {
-    background-color: var(--ezura-dark);
-    color: var(--ezura-text);
-}
-
-.approach {
-    padding: 80px 20px;
+    --ezura-brand: #ff8c2d;    /* Exact orange from your logo */
+    --ezura-dark: #0f172a;     /* Professional dark navy */
 }
 
 .brand-text {
     color: var(--ezura-brand) !important;
 }
 
-.approach-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.approach {
+    padding: 80px 20px;
+    text-align: center; /* Keeps everything balanced and professional */
 }
 
-/* Darker Cards with Brand Accents */
+.subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
 .approach-card {
-    background: #1e293b; /* Deep slate, not white */
-    padding: 35px;
-    border-radius: 15px;
-    border-left: 5px solid var(--ezura-brand);
-    transition: all 0.3s ease;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    /* Subtle 2-point shadow for professional depth */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--ezura-brand);
+    transition: transform 0.3s ease;
 }
 
 .approach-card:hover {
-    background: #334155;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Bold, Readable Button in Logo Color */
+.partnership-portal {
+    margin-top: 60px;
+    padding: 50px;
+    background: #f8fafc;
+    border-radius: 15px;
+    text-align: center; /* Centers the text and the button */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* THE BUTTON: Centered, Professional, Logo-Orange */
 .cta-button {
     display: inline-block;
+    margin-top: 25px;
     padding: 15px 35px;
-    background-color: var(--ezura-brand); /* Solid Logo Color */
-    color: #000000; /* Black text for maximum contrast on orange */
+    background-color: var(--ezura-brand); /* Your Logo Color */
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 800;
+    border-radius: 6px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(255, 140, 45, 0.4);
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--ezura-gold);
-    transform: scale(1.05);
+    filter: brightness(1.1);
+    transform: scale(1.02);
 }
-
