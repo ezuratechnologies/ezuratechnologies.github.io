@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ezura Approach</title>
-    
-    <link rel="icon" href="/ezura.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/ezura-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/ezura-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ezura Technologies – Approach</title>
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #ffffff; color: #333333; line-height: 1.6; }
 
-    <link rel="stylesheet" href="style.css">
+    /* Container */
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+
+    /* Section Styling */
+    section { margin-bottom: 60px; }
+    h2 { font-size: 2rem; margin-bottom: 20px; color: #222; }
+    p { font-size: 1rem; margin-bottom: 15px; }
+
+    /* Card Styling */
+    .card { background-color: #fff; padding: 25px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    
+    /* CTA Button */
+    .cta-btn { display: inline-block; background-color: #FF6600; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
+    .cta-btn:hover { background-color: #e55b00; }
+
+    /* Layout for Cards */
+    .cards { display: flex; flex-wrap: wrap; gap: 20px; }
+    .cards .card { flex: 1 1 300px; }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      h2 { font-size: 1.5rem; }
+      p { font-size: 0.95rem; }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="container">
-        <a href="index.html" class="nav-logo">Ezura</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="approach.html">Approach</a>
-            <a href="founder.html">Founder</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</nav>
+  <div class="container">
+    
+    <!-- Hero / Intro -->
+    <section>
+      <h2>Logic First, Design Second</h2>
+      <p>Every solution begins with the real-world friction it aims to solve. Our designs start as blueprints—flows, screens, and user journeys created in PowerPoint—so that the logic is ironclad before we add colors or polish. Whether it’s preventing the stress of lost family documents or making travel coordination effortless, our process ensures the app works when it matters most.</p>
+    </section>
 
-<section class="approach">
-    <div class="container fade-in">
-        <h2>Our Methodology: Logic-First Engineering</h2>
-        <p class="subtitle">Turning real-world friction into elegant digital solutions.</p>
+    <!-- Blueprint Logic Methodology -->
+    <section class="cards">
+      <div class="card">
+        <h3>Blueprint Logic</h3>
+        <p>We architect every app to handle high-stress, real-world scenarios first. Only then do we finalize design aesthetics, ensuring functionality over flashiness.</p>
+      </div>
+      <div class="card">
+        <h3>Problem-Solving Inspiration</h3>
+        <p>Our ideas come from real frictions. For example, FamDoc was inspired by the stress of missing family documents during critical times like pandemics.</p>
+      </div>
+    </section>
 
-        <div class="approach-grid">
-            <div class="approach-card">
-                <h3>01. Logic-First Architecture</h3>
-                <p>Rooted in strategic finance, our process begins with the blueprint, not the brush. We map out complex user journeys—like managing family legacies or real-time travel coordination—before a single line of code is written.</p>
-            </div>
+    <!-- Partnerships & Ecosystem -->
+    <section>
+      <h2>Collaborate, Don’t Compromise</h2>
+      <p>Ezura invites professionals, service providers, and partners to join our ecosystem. We don’t seek support—we build collaborations. Partners benefit from meaningful engagement without compromising user trust.</p>
+      <a href="#join" class="cta-btn">Join Our Ecosystem</a>
+    </section>
 
-            <div class="approach-card">
-                <h3>02. Purpose-Built Simplicity</h3>
-                <p>We prioritize utility over ornament. By using rapid visualization and logic flows, we ensure the "Magic Button"—the core feature that solves the user's problem—remains the focus of every app.</p>
-            </div>
+    <!-- Data Ethics -->
+    <section>
+      <h2>Privacy is Non-Negotiable</h2>
+      <p>User data is never sold or monetized. For example, travel inquiries in Buddy Travel Partner are shared with agents as <strong>paid lead opportunities</strong>, never as raw personal data. Transparency, consent, and respect guide every decision we make.</p>
+    </section>
 
-            <div class="approach-card">
-                <h3>03. Strategic Scaling</h3>
-                <p>We launch in the world's most diverse markets, starting with India, to pressure-test our products for global resilience. This ensures our solutions work seamlessly across generations and geographies.</p>
-            </div>
-        </div>
+    <!-- Visual Identity & Design Principles -->
+    <section class="cards">
+      <div class="card">
+        <h3>Design That Feels Right</h3>
+        <p>Our interface focuses on clarity and comfort: white backgrounds with subtle card shadows, vibrant orange buttons with white text, and layouts that reduce cognitive load.</p>
+      </div>
+      <div class="card">
+        <h3>Intuitive Interaction</h3>
+        <p>Every element—from login screens to dashboards—is intentionally designed to be simple, accessible, and human-first.</p>
+      </div>
+    </section>
 
-        <div class="partnership-portal">
-            <h3>Collaborate with the Ezura Network</h3>
-            <p>We provide a lead-generation marketplace that connects professional service providers with high-intent users. We invite travel agents and automotive suppliers to join our ecosystem.</p>
-            <a href="contact.html" class="cta-button">Join the Network</a>
-        </div>
-    </div>
-</section>
-
-<script>
-const navLinks = document.querySelectorAll('.nav-links a');
-const path = window.location.pathname;
-const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
-
-navLinks.forEach(link => {
-    if(link.getAttribute('href') === page) {
-        link.classList.add('active');
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    fadeElements.forEach(el => observer.observe(el));
-});
-</script>
+  </div>
 
 </body>
 </html>
-
-
-
-
-
