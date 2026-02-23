@@ -434,4 +434,52 @@ body, html {
     }
 }
 
+/* =========================
+   approach-grid
+========================= */
+Suggested CSS Additions
+To make this grid look professional in your style.css, add these styles:
+
+CSS
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.approach-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-top: 4px solid #3b82f6; /* Modern tech blue accent */
+}
+
+.partnership-portal {
+    margin-top: 60px;
+    padding: 40px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
 
