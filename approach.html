@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezura – Our Approach</title>
+    
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="/ezura.ico" type="image/x-icon">
@@ -11,15 +12,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/ezura-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/ezura-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="container">
         <a href="index.html" class="nav-logo">Ezura</a>
-
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -31,7 +29,7 @@
     </div>
 </nav>
 
-<section class="approach">
+<section class="approach-section">
     <div class="container fade-in">
         <h2 class="brand-text">The Ezura Approach: Engineering for Purpose</h2>
         <p class="subtitle">Turning real-world friction into stable digital assets.</p>
@@ -39,12 +37,12 @@
         <div class="approach-grid">
             <div class="approach-card">
                 <h3 class="brand-text">01. Blueprint Logic</h3>
-                <p>We architect the solution before writing a single line of code. Rooted in <strong>Strategic Finance</strong>, our methodology uses logic to map out exact "frictions"—like the document chaos that inspired <strong>FamDocs</strong>—to ensure the infrastructure is stable and predictable.</p>
+                <p>We architect the solution before writing a single line of code. Rooted in <strong>Strategic Finance</strong>, our methodology maps out exact "frictions"—like the document chaos that inspired <strong>FamDocs</strong>—to ensure the infrastructure is stable and predictable.</p>
             </div>
 
             <div class="approach-card">
                 <h3 class="brand-text">02. Specialized Utility</h3>
-                <p>We believe in "one app, one clear purpose." We strip away the noise and focus on the core feature that makes a tool indispensable, such as the <strong>Buddy</strong> Walkie-Talkie for instant connection or the <strong>Garage+</strong> 3D Preview for visual upgrades.</p>
+                <p>We believe in "one app, one clear purpose". We focus on the core feature that makes a tool indispensable, such as the <strong>Buddy</strong> Walkie-Talkie for instant connection or the <strong>Garage+</strong> 3D Preview for visual upgrades.</p>
             </div>
 
             <div class="approach-card">
@@ -53,46 +51,35 @@
             </div>
         </div>
 
-        <div class="partnership-portal">
-            <h3 class="brand-text">The Partnership Engine</h3>
-            <p>Ezura is not just a portfolio of applications; it is a growing ecosystem built for long-term, collective value. We collaborate with aligned <strong>Investors</strong>, capable <strong>Contributors</strong>, and trusted <strong>Suppliers</strong> who believe in building early and scaling together. Whether you are shaping the foundation or joining as an <strong>Early-Access User</strong>, there is a place for you in the ecosystem.</p>
-            <a href="contact.html" class="cta-button">Join Euzra</a>
+        <div class="approach-footer">
+            <a href="projects.html" class="cta-button">See the Logic in Action</a>
         </div>
     </div>
 </section>
 
 <script>
-const navLinks = document.querySelectorAll('.nav-links a');
-const path = window.location.pathname;
-const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+    // Active link highlighting
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const path = window.location.pathname;
+    const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
 
-navLinks.forEach(link => {
-    if(link.getAttribute('href') === page) {
-        link.classList.add('active');
-    }
-});
-</script>
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === page) {
+            link.classList.add('active');
+        }
+    });
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    fadeElements.forEach(el => observer.observe(el));
-});
+    // Fade-in animation
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    });
 </script>
 
 </body>
 </html>
-
-
-
-
-
